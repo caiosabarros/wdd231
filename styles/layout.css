@@ -1,0 +1,33 @@
+/* small view navigation */
+.navigation a {
+    display: none;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+
+.open a {
+    display: block;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    /*color: #000;*/
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+    color: black;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+@media screen and (min-width:800px) {}
+
+@media screen and (min-width:1200px) {}
