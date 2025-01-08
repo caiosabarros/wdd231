@@ -173,11 +173,33 @@ function displayAllCourseWork() {
     })
 }
 
-function displayAllCourses() {
+function displayAllCoursesAndWayWind() {
     allCourses();
     displayAllCourseWork();
+    wayWind();
 }
 
-document.addEventListener("DOMContentLoaded", displayAllCourses);
+/** hamburguer button */
+const hamButton = document.querySelector("#menu");
+const navigationMenu = document.querySelector(".navigation");
+
+hamButton.addEventListener("click", () => {
+    navigationMenu.classList.toggle('open');
+    hamButton.classList.toggle('open');
+});
+
+// waywinding
+function wayWind() {
+    const currentPagePath = window.location.pathname;
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach((navLink) => {
+        if (String(navLink.getAttribute("href")).includes(currentPagePath)) {
+            // TODO: remove it from HOME nav link
+            navLink.classList.add("active");
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", displayAllCoursesAndWayWind);
 
 
