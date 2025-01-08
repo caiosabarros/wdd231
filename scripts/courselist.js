@@ -137,15 +137,16 @@ function markCompleted() {
                 if (course.completed) {
                     p.style.color = 'white';
                     p.style.padding = '5px';
-                    p.style.backgroundColor = 'green';
+                    p.style.backgroundColor = 'darkgreen';
                     p.style.maxWidth = 'fit-content';
                 } else {
                     p.style.color = 'white';
-                    p.style.backgroundColor = 'grey';
+                    p.style.backgroundColor = '#363636';
                 }
             }
             p.style.padding = '5px';
             p.style.maxWidth = 'fit-content';
+            p.style.fontSize = '19px'
             // p.style.borderRadius = '5px';
         })
     });

@@ -54,7 +54,11 @@ section {
 
 #menu::before {
     content: "☰";
-    color: black;
+    color: white;
+}
+
+#menu {
+    color: white;
 }
 
 #menu.open::before {
@@ -135,12 +139,15 @@ footer {
     align-items: center;
 }
 
-img {
+div img {
     /* width: 100%; */
     height: auto;
     max-width: 261px;
 }
 
+section img {
+    max-width: 196px;
+}
 
 @media screen and (min-width:800px) {
     #menu {
