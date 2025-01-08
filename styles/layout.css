@@ -135,6 +135,12 @@ footer {
     align-items: center;
 }
 
+img {
+    /* width: 100%; */
+    height: auto;
+    max-width: 261px;
+}
+
 
 @media screen and (min-width:800px) {
     #menu {
