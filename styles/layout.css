@@ -43,8 +43,7 @@ a {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 
 section {
@@ -94,8 +93,47 @@ h1 {
 
 section ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
 }
+
+section ul li {
+    margin: 0 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: fit-content;
+}
+
+footer {
+    text-align: center;
+    background-color: #174562;
+    color: white;
+    padding: 5px 0 5px 0;
+}
+
+#coursework {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#coursework li {
+    margin: 5px 0 0 0;
+    background-color: #174562;
+    border-radius: 0;
+}
+
+#courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 
 @media screen and (min-width:800px) {
     #menu {
@@ -127,7 +165,7 @@ section ul {
 
     main {
         display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-template: auto auto / 1fr 1fr;
     }
 
     section:last-child {
@@ -144,9 +182,14 @@ section ul {
         justify-content: center;
     }
 
+    #courses {
+        display: flex;
+        flex-direction: row;
+    }
+
     section ul li {
         margin: 0 5px;
-        background-color: grey;
+        background-color: black;
         color: white;
         border-radius: 5px;
         padding: 5px;
@@ -154,13 +197,16 @@ section ul {
 
     section ul li:hover {
         margin: 0 5px;
-        background-color: grey;
         color: white;
         border-radius: 5px;
         padding: 5px;
         transform: scale(1.1);
         transition: transform 0.3s ease;
         cursor: pointer;
+    }
+
+    #courses p {
+        margin: 5px 10px 10px 10px;
     }
 }
 

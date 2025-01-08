@@ -89,6 +89,7 @@ function wddCourses() {
         paragraph.textContent = `${course.subject} ${String(course.number)}`;
         coursesDiv.appendChild(paragraph);
     });
+    markCompleted();
 }
 
 function cseCourses() {
@@ -99,6 +100,7 @@ function cseCourses() {
         paragraph.textContent = `${course.subject} ${String(course.number)}`;
         coursesDiv.appendChild(paragraph);
     });
+    markCompleted();
 }
 
 function allCourses() {
@@ -108,6 +110,7 @@ function allCourses() {
         paragraph.textContent = `${course.subject} ${String(course.number)}`;
         coursesDiv.appendChild(paragraph);
     });
+    markCompleted();
 }
 
 // used to remove not accumulate p children when clicking on 
@@ -119,4 +122,49 @@ function removeChildren() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", allCourses);
+// used to mark completed courses shown in the page.
+function markCompleted() {
+    const paragraphs = coursesDiv.querySelectorAll("p");
+    paragraphs.forEach((p) => {
+        // get course and number
+        const subject = String(p.textContent).split(' ')[0];
+        const number = String(p.textContent).split(' ')[1];
+
+        // match against courses array
+        courses.forEach((course) => {
+            if (course.subject == subject && course.number == number) {
+                // if completed, mark it
+                if (course.completed) {
+                    p.style.color = 'white';
+                    p.style.padding = '5px';
+                    p.style.backgroundColor = 'green';
+                    p.style.maxWidth = 'fit-content';
+                } else {
+                    p.style.color = 'white';
+                    p.style.backgroundColor = 'grey';
+                }
+            }
+            p.style.padding = '5px';
+            p.style.maxWidth = 'fit-content';
+            // p.style.borderRadius = '5px';
+        })
+    });
+}
+
+function displayAllCourseWork() {
+    const courseWork = document.querySelector("#coursework");
+    courses.forEach((course) => {
+        const listElement = document.createElement('li');
+        listElement.textContent = `${course.subject + ' ' + course.number} - ${course.title}`;
+        courseWork.appendChild(listElement);
+    })
+}
+
+function displayAllCourses() {
+    allCourses();
+    displayAllCourseWork();
+}
+
+document.addEventListener("DOMContentLoaded", displayAllCourses);
+
+
