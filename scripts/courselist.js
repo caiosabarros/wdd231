@@ -125,10 +125,14 @@ function removeChildren() {
 // used to mark completed courses shown in the page.
 function markCompleted() {
     const paragraphs = coursesDiv.querySelectorAll("p");
+    // get credits
+    let credits = 0
+    let selectedCourses = [];
     paragraphs.forEach((p) => {
         // get course and number
         const subject = String(p.textContent).split(' ')[0];
         const number = String(p.textContent).split(' ')[1];
+
 
         // match against courses array
         courses.forEach((course) => {
@@ -143,13 +147,21 @@ function markCompleted() {
                     p.style.color = 'white';
                     p.style.backgroundColor = '#363636';
                 }
+                selectedCourses.push(course);
             }
             p.style.padding = '5px';
             p.style.maxWidth = 'fit-content';
             p.style.fontSize = '19px'
-            // p.style.borderRadius = '5px';
         })
     });
+
+    // reduce as requested
+    credits = selectedCourses.reduce(
+        (acc, course) => acc + course.credits,
+        0,
+    );
+
+    document.getElementById("credits").textContent = `The total number of credits for these courses is ${credits}`;
 }
 
 function displayAllCourseWork() {
