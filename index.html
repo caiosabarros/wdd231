@@ -17,14 +17,16 @@
 
 <body>
     <header>
-        <img src="#" alt="Caio Sa">
-        <h1>Caio H. Sa</h1>
+        <div>
+            <img src="images/foto_2_30.webp" alt="Caio Sa">
+            <h1>Caio H. Sa</h1>
+        </div>
         <nav class="navigation">
             <ul>
-                <li><a>Home</a></li>
-                <li><a>Chamber</a></li>
-                <li><a>GitHub Profile</a></li>
-                <li><a>LinkedIn</a></li>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
             </ul>
         </nav>
         <!--should it be here or in main?-->
@@ -44,20 +46,28 @@
         <!--Brasilia, Brazil-->
         <section>
             <h2>Brasilia, Brazil</h2>
-            <img src="#" alt="city of Brasilia">
+            <img src="images/pexels-joelalencar-27794156_5_1_65.webp" alt="city of Brasilia">
         </section>
         <!--Web and Computer Programming Certificate-->
         <section>
             <h2>Web and Computer Programming Certificate</h2>
+            <ul>
+                <li onclick="allCourses()">All</li>
+                <li onclick="cseCourses()">CSE</li>
+                <li onclick="wddCourses()">WDD</li>
+            </ul>
+            <hr>
+            <div id="courses"></div>
         </section>
     </main>
     <footer>
         <!--copyright symbol and currentyear written using js-->
-        <p>&copy; <span id="currentyear">, Caio Sa, Brasilia - Brazil.</span></p>
+        <p>&copy; <span id="currentyear"></span>, Caio Sa, Brasilia - Brazil.</p>
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/script.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courselist.js" defer></script>
 </body>
 
 </html>

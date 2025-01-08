@@ -77,3 +77,46 @@ const courses = [
         completed: false
     }
 ]
+
+// inject course list into courses card
+// @dev styling in the .css file
+const coursesDiv = document.getElementById("courses");
+function wddCourses() {
+    removeChildren();
+    const wdds = courses.filter((course) => course.subject == 'WDD');
+    wdds.forEach((course) => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = `${course.subject} ${String(course.number)}`;
+        coursesDiv.appendChild(paragraph);
+    });
+}
+
+function cseCourses() {
+    removeChildren();
+    const cses = courses.filter((course) => course.subject == 'CSE');
+    cses.forEach((course) => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = `${course.subject} ${String(course.number)}`;
+        coursesDiv.appendChild(paragraph);
+    });
+}
+
+function allCourses() {
+    removeChildren();
+    courses.forEach((course) => {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = `${course.subject} ${String(course.number)}`;
+        coursesDiv.appendChild(paragraph);
+    });
+}
+
+// used to remove not accumulate p children when clicking on 
+// selectors sequentially
+function removeChildren() {
+    const paragraphs = coursesDiv.querySelectorAll("p");
+    paragraphs.forEach((p) => {
+        coursesDiv.removeChild(p);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", allCourses);
