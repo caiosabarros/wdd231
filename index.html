@@ -10,14 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/layout.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/layout.css" media="all">
     <title>CourseWork for Caio Sa</title>
 </head>
 
 <body>
     <header>
         <div>
-            <img src="images/foto_2_30.webp" alt="Caio Sa">
+            <img src="images/foto_2_30.webp" srcset="images/foto_2_30_cropped.webp 130w,
+                    images/foto_2_30.webp 261w" sizes="(max-width: 800px) 130px,
+                   261px" alt="Caio Sa" width="261" height="209" loading="eager" fetchpriority="high">
             <h1>Coursework for Caio Sa</h1>
         </div>
         <nav class="navigation">

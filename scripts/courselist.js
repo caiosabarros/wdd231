@@ -173,12 +173,6 @@ function displayAllCourseWork() {
     })
 }
 
-function displayAllCoursesAndWayWind() {
-    allCourses();
-    displayAllCourseWork();
-    wayWind();
-}
-
 /** hamburguer button */
 const hamButton = document.querySelector("#menu");
 const navigationMenu = document.querySelector(".navigation");
@@ -186,7 +180,7 @@ const navigationMenu = document.querySelector(".navigation");
 hamButton.addEventListener("click", () => {
     navigationMenu.classList.toggle('open');
     hamButton.classList.toggle('open');
-});
+}, { passive: true });
 
 // waywinding
 function wayWind() {
@@ -200,6 +194,10 @@ function wayWind() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", displayAllCoursesAndWayWind);
+document.addEventListener("DOMContentLoaded", () => {
+    allCourses();
+    displayAllCourseWork();
+    wayWind();
+}, { passive: true });
 
 

@@ -90,6 +90,9 @@ header div h1 {
 header img {
     margin: 10px;
     border: 2px solid white;
+    aspect-ratio: 261/209;
+    width: 261px;
+    height: auto;
 }
 
 h1 {
