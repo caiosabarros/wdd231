@@ -30,10 +30,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         // pass the member to the helper function && get the return
         const templateCard = buildCardTemplateWithData(member)
         // insert it to the target .cards 
-        cards.insertAdjacentHTML('afterbegin', templateCard);
+        cards.insertAdjacentHTML('beforeend', templateCard);
     });
 })
 
+// change layout of members to grid or list
+const displaySelection = document.querySelector("#display");
+displaySelection.addEventListener("click", () => {
+    // if it was grid when clicked, then display grid.
+    if (displaySelection.textContent == 'Grid') {
+        cards.classList.remove("list");
+        cards.classList.add("grid");
+        displaySelection.textContent = 'List';
+    } else {
+        cards.classList.remove("grid");
+        cards.classList.add("list");
+        displaySelection.textContent = 'Grid';
+    }
+});
 
-
+// ham menu
+const menu = document.querySelector("#menu");
+const navMenu = document.querySelector(".navigation");
+menu.addEventListener("click", () => {
+    navMenu.classList.toggle("responsive");
+});
 

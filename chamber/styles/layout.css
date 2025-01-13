@@ -1,11 +1,126 @@
 @media screen and (min-width:320px) {
 
-    .cards {
-        background-color: blue;
+    header {
+        background-color: #174562;
+        /* color: white; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
     }
 
-    hr {
+    header div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    header div>img {
+        padding: .5rem;
+        float: left
+    }
+
+    nav li {
+        display: none;
+    }
+
+    #menu::before {
+        content: "☰";
+        /* color: white; */
+        cursor: pointer;
+    }
+
+    #menu {
+        margin-right: 5px;
+    }
+
+    #mode {
+        background-image: url('images/icons8-black-and-white-30.png');
+        min-width: 30px;
+        height: 30px;
+        border: none;
+        padding-top: 5px;
+        cursor: pointer;
+    }
+
+    h4 {
+        margin: 0;
+        padding: 0;
         color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    ul {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    li {
+        margin: 0 10px 0 0;
+        list-style: none;
+        width: 100%;
+    }
+
+    li:hover {
+        background-color: #091f2c;
+    }
+
+    .navigation.responsive ul {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navigation.responsive {
+        width: 100%;
+        left: 0;
+    }
+
+    .navigation {
+        background-color: #174562;
+        color: white;
+        top: 0;
+    }
+
+    .responsive li {
+        display: block;
+        width: 100%;
+    }
+
+    .cards {
+        margin: 0 10px 0;
+    }
+
+    /*image sizes 222px 148px*/
+    .grid {
+        display: grid;
+        grid-template: auto / repeat(auto-fit, minmax(222px, 1fr));
+        gap: 20px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cards section {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        text-align: center;
+        padding: 0 10px 0;
     }
 
     main>img {
@@ -14,20 +129,56 @@
         object-fit: cover;
         max-height: 200px;
     }
+
+    hr,
+    h1 {
+        color: white;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        color: #174562;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    main {
+        background-color: #174562;
+        color: black;
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+        text-align: center;
+        /* margin-bottom: 40px; */
+        padding-bottom: 15px;
+        margin-top: -5px;
+    }
+
+    main>button {
+        /* box-shadow: 0 4px 10px rgb(0, 204, 255); */
+        margin: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    section {
+        background-color: white;
+    }
 }
 
 @media screen and (min-width:800px) {
+
+    nav li {
+        display: block;
+    }
 
     header {
         display: flex;
         justify-content: space-between;
     }
 
-    header div {}
-
-    header div img {
-        padding: 1rem;
-        float: left
+    nav a:hover {
+        text-decoration: overline;
     }
 
     #menu {
@@ -35,12 +186,7 @@
     }
 
     #mode {
-        background-image: url('images/icons8-black-and-white-30.png');
-        width: 30px;
-        height: 30px;
-        border: none;
-        padding-top: 5px;
-        cursor: pointer;
+        /* width: 130px; */
     }
 
     nav {
@@ -53,17 +199,15 @@
         align-items: end;
     }
 
-    a {
-        text-decoration: none;
+    .navigation {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+
     }
 
     #mode {
         cursor: pointer;
-    }
-
-    li {
-        margin: 0 10px 0 0;
-        list-style: none;
     }
 
     body {
@@ -72,16 +216,6 @@
 
 
 
-    .cards {
-        background-color: blue;
-    }
 
-    hr {
-        color: white;
-    }
 
-    footer {
-        display: flex;
-        justify-content: space-around;
-    }
 }
