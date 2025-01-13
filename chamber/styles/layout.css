@@ -129,9 +129,24 @@
         max-height: 200px;
     }
 
+    #display {
+        cursor: pointer;
+        background-color: white;
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+    #display:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+        padding: 5px;
+    }
+
     hr,
-    h1 {
+    h1,
+    h2 {
         color: white;
+        font-family: 'Roboto', sans-serif;
     }
 
     footer {
