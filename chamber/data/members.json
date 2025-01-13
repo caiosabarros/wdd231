@@ -1,0 +1,88 @@
+{
+    "members": [
+        {
+            "company": "01",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "123 Main St, New York, NY 10001",
+                "phone": "(646) 555-7890",
+                "image": "images/companies/pexels-abhinavcoca-291539_with_bgc.webp",
+                "level": "gold",
+                "email": "star@bucks.com",
+                "name": "Starbucks Coffe"
+            }
+        },
+        {
+            "company": "03",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "789 Oak St, Queens, NY 11354",
+                "phone": "(212) 555-3456",
+                "image": "images/companies/pexels-alleksana-4113682_with_bgc.webp",
+                "level": "gold",
+                "email": "apple@inc.com",
+                "name": "Apple Inc."
+            }
+        },
+        {
+            "company": "04",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "321 Pine St, Manhattan, NY 10022",
+                "phone": "(929) 555-2109",
+                "image": "images/companies/pexels-bertellifotografia-29509441_with_bgc.webp",
+                "level": "gold",
+                "email": "coca@cola.com",
+                "name": "Coca Cola"
+            }
+        },
+        {
+            "company": "05",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "567 Maple St, Bronx, NY 10453",
+                "phone": "(347) 555-8765",
+                "image": "images/companies/pexels-busenur-demirkan-766536648-29200640_with_bgc.webp",
+                "level": "gold",
+                "email": "choco@labs.com",
+                "name": "ChocoLabs"
+            }
+        },
+        {
+            "company": "06",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "890 Birch St, Staten Island, NY 10301",
+                "phone": "(917) 555-4321",
+                "image": "images/companies/pexels-dpsinghbhullar-29230056_with_bgc.webp",
+                "level": "gold",
+                "email": "seven@eleven.com",
+                "name": "Seven Eleven"
+            }
+        },
+        {
+            "company": "07",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "234 Cedar St, Brooklyn, NY 11215",
+                "phone": "(646) 555-9876",
+                "image": "images/companies/pexels-enginakyurt-9740571_with_bgc.webp",
+                "level": "gold",
+                "email": "audi@vehicles.com",
+                "name": "Audi Inc."
+            }
+        },
+        {
+            "company": "08",
+            "info": {
+                "url": "https://www.chamber.nyc/",
+                "address": "876 Spruce St, Queens, NY 11432",
+                "phone": "(718) 555-5678",
+                "image": "images/companies/pexels-hoanggiahuy-9973155_with_bgc.webp",
+                "level": "gold",
+                "email": "good@year.com",
+                "name": "Good Year"
+            }
+        }
+    ]
+}

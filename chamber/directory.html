@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caio Sa">
+    <meta name="description" content="Chamber of Commerce for the New York City area.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Meta meta tags-->
+    <meta property="og:site_name" content="New York City Chamber of Commerce">
+    <meta property="og:url" content="https://caiosabarros.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="New Yor City Chamber of Commerce">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/4331280/pexels-photo-4331280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Chamber of Commerce for the New York City area.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/layout.css" media="all">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+        <!--logo, chamber name and concise description group-->
+        <div>
+            <img src="images/logo_35.png" alt="Chamber logo">
+            <h4>Manhattan Chamber of Commerce</h4>
+        </div>
+        <!--end of group-->
+        <nav class="navigation">
+            <!-- The responsive, main navigation menu must support the pages listed in the site plan. -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#directory">Directory</a></li>
+                <li><a href="#join">Join</a></li>
+                <li><a href="#discover">Discover</a></li>
+                <!--ham menu-->
+                <button id="menu"></button>
+                <!--dark/light mode-->
+                <button id="mode"></button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="images/pexels-fernando-gonzalez-2626178-4331280.webp" alt="">
+        <h1>Directory Members</h1>
+        <!-- The main content of the directory page will display a list of members as a grid of 'cards' or as a line item list, depending upon the user's selection. -->
+        <div class="cards">
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p><strong>Manhattan Chamber of Commerce</strong></p>
+            <!--Maps icon-->
+            <p>575 Fifth Avenue, 14th Floor - New York, NY 10017</p>
+            <!--Phone icon-->
+            <p>(212) 123-1234</p>
+            <!--Envelope icon-->
+            <p>info@info.org</p>
+        </div>
+        <div>
+            <p>Social Media</p>
+            <p>Social Media</p>
+            <p>Social Media</p>
+            <a href="https://www.vecteezy.com/free-vector/m-education-logo">M Education
+                Logo Vectors by Vecteezy</a>
+
+        </div>
+        <div>
+            <p>WDD 231 Class Project</p>
+            <p>Caio Henrique Sa Barros</p>
+            <!--copyright symbol and currentyear written using js-->
+            <p>&copy; <span id="currentyear"></span> NYC Chamber of Commerce.</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/utils.js"></script>
+</body>
+
+</html>
