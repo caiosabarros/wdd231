@@ -52,3 +52,9 @@ menu.addEventListener("click", () => {
     navMenu.classList.toggle("responsive");
 });
 
+// waywind
+const menuList = document.querySelector("nav ul");
+const matcher = document.querySelector("#menu-matcher");
+menuList.addEventListener("click", (e) => {
+    matcher.textContent = e.target.textContent;
+})
