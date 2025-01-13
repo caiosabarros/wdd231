@@ -1,9 +1,8 @@
 // I will replace the target substrings with te loaded json
 function buildCardTemplateWithData(member) {
-
-    const cardsDirectoryTemplate =
+    const section = document.createElement("section");
+    section.innerHTML =
         `
-    <section>
         <h2>${member.info.name}</h2>
         <p>${member.info.address}</p>
         <hr>
@@ -14,10 +13,9 @@ function buildCardTemplateWithData(member) {
             <p><span><strong>URL:</strong></span>${member.info.url}</p>
             <p><span><strong>LEVEL:</strong></span>${member.info.level}</p>
         </div>
-    </section>
     `;
 
-    return cardsDirectoryTemplate;
+    return section;
 }
 
 // get the element
@@ -28,9 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     data.members.forEach((member) => {
         // pass the member to the helper function && get the return
-        const templateCard = buildCardTemplateWithData(member)
-        // insert it to the target .cards 
-        cards.insertAdjacentHTML('beforeend', templateCard);
+        cards.appendChild(buildCardTemplateWithData(member));
     });
 })
 
