@@ -169,6 +169,10 @@
         max-width: 100%;
     }
 
+    footer>div>a {
+        color: #174562;
+    }
+
 }
 
 @media screen and (min-width:800px) {
@@ -218,8 +222,6 @@
     body {
         height: 100vh;
     }
-
-
 
 
 
